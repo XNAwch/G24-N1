@@ -3,7 +3,7 @@
 #include <ctype.h>
 #include <math.h>
 
-typedef struct nd{
+typedef struct nd{ //Node
     char c;
     struct nd *next;
 }node;
@@ -49,7 +49,7 @@ void checkoper(char ck){ //Check operator
     } 
 }
 
-void main(){
+void main(){ //Display
     char ch,con;
     int i=1;
     printf("Infix to Postfix:\n");
