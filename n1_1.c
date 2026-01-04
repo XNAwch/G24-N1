@@ -52,13 +52,20 @@ void checkoper(char ck){ //Check operator
 void main(){ //Display
     char ch,con;
     int i=1;
-    printf("Infix to Postfix:\n");
+    printf("---Infix to Postfix---\n");
     do{
+        int r=1;
+        printf("\n");
         printf("Enter Infix %d: ",i);
+
         while((ch=getchar()) != '\n' && ch != EOF){
-        if(isspace(ch)) continue;
-        if(isalnum(ch)) printf("%c",ch);
-        else checkoper(ch);
+            if(r==1){
+                printf("Postfix Result: ");
+                r=0;
+            }
+            if(isspace(ch)) continue;
+            if(isalnum(ch)) printf("%c",ch);
+            else checkoper(ch);
         }
         while(top != NULL) printf("%c",pop());
         printf("\n");
