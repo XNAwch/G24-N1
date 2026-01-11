@@ -43,7 +43,7 @@ void checkoper(char ck){ //Check operator
         while(top != NULL && stacktop() != '(') printf("%c",pop());
         pop();
     }else{
-        while(top != NULL && stacktop() != '(' && checkpr(stacktop()) >= checkpr(ck)) printf("%c",pop());
+        while(top != NULL && stacktop() != '(' && checkpr(stacktop()) >= checkpr(ck) && ck != '^') printf("%c",pop());
         push(ck);
     } 
 }
