@@ -58,7 +58,7 @@ void main(){ //Display
         printf("\n");
         printf("Enter Infix %d: ",i);
 
-        while((ch=getchar()) != '\n' && ch != EOF){
+        while((ch=getchar()) != '\n'){
             if(r==1){
                 printf("Postfix Result: ");
                 r=0;
